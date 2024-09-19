@@ -1,5 +1,5 @@
 const SubjectTimes = [
-    { hour: 21, minute: 55 },
+    { hour: 7, minute: 55 },
     { hour: 8, minute: 45 },
     { hour: 9, minute: 40 },
     { hour: 10, minute: 35 },
