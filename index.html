@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="JS/lib/luxon.js"></script>
     <script src="JS/MainTime.js"></script>
     <script src="JS/SubjectTools.js"></script>
     <script src="JS/NextSubjectTimer.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body onload="startTime(), startCountdownNextSubject()">
-    <div id="nextdiv">
-        <p id="nextclasstime">NEXTCLASSTIME</p>
-        <p>Siguiente clase:</p>
-        <p id="nextclass">class placeholder</p>
+<body onload="startTime()">
+    <div id="start">
+        <div id="weekdaydiv">
+            <p id="weekday">date</p>
+        </div>
+        <p id="currentsubject">Toca SUBJECT</p>
     </div>
-    <div id="maintime">TIME</div>
-</body>
+    <div id="nextdiv">
+        <p id="nextsubjecttime">00:00</p>
+        <p>Siguiente clase: <br><span id="nextsubject">SUBJECT<span></p>
+    </div>
+    <div id="maintime">00:00:00</div>
+    <button onclick="toggleDarkMode()" class="button" id="colortoggle"><i id='toggledarkmodeicon' class='bx bxs-sun'></i></button>
+</body> 
 </html>
