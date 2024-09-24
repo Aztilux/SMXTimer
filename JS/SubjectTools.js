@@ -68,7 +68,7 @@ function getCurrentSubjectTime() {
     var index = 0
     var subjectIndex = 7
     for (var subjectTime of SubjectTimes) {
-        var time = DateTime.local(today.year, today.month, today.day, subjectTime.hour, subjectTime.minute).toMillis()
+        var time = DateTime.local(today.year, today.month, today.day, subjectTime.hour, subjectTime.minute, { zone: "UTC" }).toMillis()
         const difference = time - today.toMillis()
         if (difference > lowestTime && difference < 0) {
             lowestTime = difference
@@ -92,6 +92,6 @@ function getNextSubject() {
     const timeIndex = getCurrentSubjectTime()
     const dayOfWeek = today.weekday
     var currentSubject
-    if (timeIndex != 7 && dayOfWeek < 6) { currentSubject = Subjects[dayOfWeek][timeIndex] } else { currentSubject = '💤 FIN DE CLASE' }
+    if (timeIndex != 7 && dayOfWeek < 6) { currentSubject = Subjects[dayOfWeek][timeIndex+1] } else { currentSubject = '💤 FIN DE CLASE' }
     return currentSubject
 }

@@ -3,7 +3,7 @@ var DateTime = luxon.DateTime;
 var today
 function startTime() {
     const localdate = DateTime.now().toISO()
-    today = DateTime.fromISO(localdate).setZone('UTC+2')
+    today = DateTime.fromISO(localdate).setZone('UTC')
     document.getElementById('weekday').innerHTML = today.toLocaleString(DateTime.DATE_HUGE, { locale: 'es-ES'})
     startCountdownNextSubject()
     let h = today.hour;
